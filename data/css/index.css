@@ -1,0 +1,264 @@
+#particles-js{
+    background-color: black;
+    height: 100vh;
+}
+* {
+    font-family: monospace;
+    color: white;
+    }
+  
+  @font-face {
+      font-family: mono;
+      src: url(/fonts/css-mono.ttf); 
+    }
+    @font-face {
+      font-family: derk;
+      src: url(/fonts/fontt.otf);
+    }
+      html {
+      font-family: mono;
+    }
+    *, *::after, *::before {
+      box-sizing: inherit;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: rgb(17, 17, 17);
+    }
+    #overlay-toggle {
+      position:absolute;
+      display: none;
+    }
+    .debold{
+      font-weight:normal
+    }
+    .socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .overlay {
+      z-index: 1;
+      background-color: #000000;
+    }
+    .overlay label {
+      display: grid;
+      place-items: center;
+      width: 100vw;
+      height: 100vw;
+      color: rgb(255, 255, 255);
+      font-size: 2rem;
+    }
+    .no-hover {
+      display: block;
+    }
+    .hover {
+      display: none;
+    }
+    .fullscreen {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-height: 100vh;
+      min-width: 100vw;
+    }
+    .text-content {
+      background: rgba(0, 0, 0, 0);
+      display: grid;
+      place-content: center;
+      text-align: center;
+      color: rgb(255, 255, 255);
+    }
+    .text-content h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+    .text-content p {
+      padding-top: 30px;
+      padding-right: 10px;
+      padding-bottom: 31px;
+      padding-left: 10px;
+      font-size: 1.7rem;
+      font-weight: 500;
+      line-height: 0.0;
+      color: rgb(192, 192, 192);
+      display: flex;
+    }
+    .text-content a {
+      padding-top: 30px;
+      padding-right: 10px;
+      padding-bottom: 31px;
+      padding-left: 10px;
+      font-size: 1.3rem;
+      line-height: 0.0;
+      color: #cccccc;
+      display: flex;
+    }
+    #overlay-toggle:checked ~ .overlay {
+      animation-fill-mode: forwards;
+      animation-name: fade, hide;
+      animation-delay: 0s, 600ms;
+      animation-duration: 600ms, 1ms;
+    }
+    #overlay-toggle:checked ~ .overlay label {
+      animation-fill-mode: forwards;
+      animation-name: fade;
+      animation-delay: 0s;
+      animation-duration: 500ms;
+    }
+    @media(hover: hover) {
+      .hover {
+        display: block;
+      }
+      .no-hover {
+        display: none;
+      }
+    }
+    @keyframes fade{
+      to {
+        opacity: 0;
+      }
+    }
+    @keyframes hide {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+    html,
+    body {
+      height: 100%;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      height:100%;
+      background: #06002B;
+      color:white;
+    }
+    
+    .avatar {
+        width: 300px;
+        border-radius: 100%;
+    }
+    
+    .profile {
+       display:block;
+       float:right;
+    }
+    
+    .texts {
+        padding: 30px;
+        display:block;
+        float:right;
+    }
+    
+    .btn-dark {
+        background: #272727 !important;
+        border:none !important;
+        box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    }
+    
+    .btn-dark:hover {
+        background: #383838 !important;
+        transition: 0.2s;
+        border:none !important;
+        outline:none !important;
+        box-shadow: none !important;
+    }
+    
+    
+    .btn-dark:focus {
+        border:none !important;
+        outline:none !important;
+        box-shadow: none !important;
+    }
+    
+    #particles-js {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        z-index: -1;
+    }
+    .typewrite {
+        position: relative;
+        color: white;
+    }
+    
+    @media screen and (max-width: 991px) {
+        .texts {
+          font-size:12px !important;
+          align-items: center;
+          text-align:center;
+          width: 100%;
+        }
+        .avatar {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-dark {
+            margin:3px;
+        }
+      }
+
+
+/* Shop css 
+.card-text-price {
+  font-family: "Montserrat", sans-serif;
+  color: grey;
+  padding: 2px 4px 2px 4px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.card-btn {
+  display: block;
+  background: #24252a;
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 15px;
+  margin-top: 15px;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.card-btn i {
+  padding-left: 7px;
+  font-size: 14px;
+}
+
+.card-btn:hover {
+  color: #A846EB;
+  transform: translateY(1px);
+}
+
+.card-body{
+  text-align: center;
+  padding: 20px;
+  background-color: #130728;
+  color: #effffb;
+  border-bottom-left-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+  border: 0;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  min-width: 18rem;
+  border: 0;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+*/
