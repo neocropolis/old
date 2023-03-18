@@ -26,7 +26,7 @@ particlesJS.load('particles-js', 'assets/particles.json', function() {
           }
         },
         "color": {
-          "value": "#21c5bd"
+          "value": "#FFFFFF"
         },
         "shape": {
           "type": "circle",
